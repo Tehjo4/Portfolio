@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -9,51 +9,174 @@
   <script src="https://kit.fontawesome.com/a2d9b6b3b3.js" crossorigin="anonymous"></script>
 
   <style>
-    :root{--accent:#0066ff;--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:#e6eef6;background:linear-gradient(180deg,#071025 0%, #071728 100%);-webkit-font-smoothing:antialiased}
-    header{position:fixed;left:0;right:0;top:0;backdrop-filter: blur(6px);background:rgba(5,12,20,.45);border-bottom:1px solid rgba(255,255,255,.03);z-index:40}
-    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px}
-    .logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700}
-    .logo i{font-size:20px;color:var(--accent)}
-    nav a{color:#cfe3ff;text-decoration:none;margin-left:18px;font-weight:600}
-    .hero{max-width:1100px;margin:110px auto 40px;padding:24px;display:grid;grid-template-columns:1fr 360px;gap:28px}
+    :root {
+      --accent: #1e90ff;
+      --bg: #cce7ff;
+      --card: #e0f0ff;
+      --muted: #4a6fa5;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin:0;
+      font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+      color: #0b2a4d;
+      background: linear-gradient(180deg, #cce7ff 0%, #99c2ff 100%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      position: fixed; left:0; right:0; top:0;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.45);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      z-index: 40;
+    }
+
+    .nav {
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px;
+    }
+
+    .logo {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#0b2a4d;
+      font-weight:700;
+    }
+
+    .logo i { font-size:20px; color: var(--accent); }
+    nav a {
+      color:#0b2a4d;
+      text-decoration:none;
+      margin-left:18px;
+      font-weight:600;
+      transition: color 0.25s;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    .hero {
+      max-width:1100px;
+      margin:110px auto 40px;
+      padding:24px;
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:28px;
+    }
 
     /* Left column */
-    .intro{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));padding:26px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,.6)}
-    .name{font-size:28px;margin:0 0 6px;color:#fff}
-    .role{color:var(--muted);margin:0 0 18px}
-    .buttons{display:flex;gap:10px;margin-bottom:16px}
-    .btn{padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,.06);cursor:pointer;color:#e9f2ff;font-weight:600}
-    .btn.primary{background:var(--accent);border:none}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{background:rgba(255,255,255,.03);padding:8px 10px;border-radius:8px;font-weight:600;color:#dff0ff}
+    .intro {
+      background: var(--card);
+      padding:26px;
+      border-radius:14px;
+      box-shadow: 0 6px 30px rgba(0, 102, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .intro:hover { transform: translateY(-5px); }
+
+    .name { font-size:28px; margin:0 0 6px; color:#0b2a4d; }
+    .role { color: var(--muted); margin:0 0 18px; }
+    .buttons { display:flex; gap:10px; margin-bottom:16px; }
+    .btn {
+      padding:10px 14px;
+      border-radius:10px;
+      background: transparent;
+      border:1px solid rgba(0,0,0,0.1);
+      cursor:pointer;
+      color:#0b2a4d;
+      font-weight:600;
+      transition: all 0.25s;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+      border:none;
+    }
+
+    .btn:hover { opacity:0.85; transform: translateY(-2px); }
+
+    .skills { display:flex; flex-wrap:wrap; gap:8px; }
+    .chip {
+      background: rgba(30,144,255,0.1);
+      padding:8px 10px;
+      border-radius:8px;
+      font-weight:600;
+      color: #0b2a4d;
+      display:flex;
+      align-items:center;
+      gap:4px;
+    }
 
     /* Right column */
-    .card{background:linear-gradient(180deg,#071022 0%, #061423 100%);padding:18px;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.03)}
-    .avatar{width:160px;height:160px;border-radius:14px;overflow:hidden;display:block}
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    .socials{display:flex;gap:10px}
-    .socials a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.02);text-decoration:none;color:#dfefff}
+    .card {
+      background: #e0f0ff;
+      padding:18px;
+      border-radius:12px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+      border:1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .avatar { width:160px; height:160px; border-radius:14px; overflow:hidden; display:block; }
+    .avatar img { width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.3s ease; }
+    .avatar img:hover { transform: scale(1.05); }
+
+    .socials { display:flex; gap:10px; margin-top:10px; }
+    .socials a {
+      display:inline-flex; align-items:center; justify-content:center;
+      width:44px; height:44px; border-radius:10px;
+      background: rgba(30,144,255,0.1);
+      color: #0b2a4d;
+      text-decoration:none;
+      transition: background 0.25s;
+    }
+
+    .socials a:hover { background: var(--accent); color:#fff; }
 
     /* Projects */
-    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-    .project{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.02);transition:transform .25s ease,box-shadow .25s ease}
-    .project:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(0,102,255,.08)}
-    .project h4{margin:6px 0;color:#fff}
-    .project p{color:var(--muted);font-size:13px;margin:0}
-    .project .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .projects { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px; }
+    .project {
+      background: #f0f8ff;
+      padding:14px;
+      border-radius:12px;
+      border:1px solid rgba(0,0,0,0.05);
+      transition: transform .25s ease, box-shadow .25s ease;
+      cursor:pointer;
+    }
+
+    .project:hover { transform: translateY(-8px); box-shadow:0 12px 30px rgba(30,144,255,0.25); }
+    .project h4 { margin:6px 0; color:#0b2a4d; }
+    .project p { color: var(--muted); font-size:13px; margin:0; }
+    .project .tags { margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
 
     /* Contact */
-    .contact{max-width:1100px;margin:22px auto;padding:20px}
-    .contact .card{display:flex;justify-content:space-between;gap:10px}
-    .contact .left{flex:1}
+    .contact { max-width:1100px; margin:22px auto; padding:20px; }
+    .contact .card { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+    .contact .left { flex:1; }
 
-    footer{margin:40px 0 80px;text-align:center;color:var(--muted)}
+    footer { margin:40px 0 80px; text-align:center; color:var(--muted); }
 
     /* Responsive */
-    @media (max-width:1000px){.hero{grid-template-columns:1fr;}.projects{grid-template-columns:repeat(2,1fr)} }
-    @media (max-width:640px){nav a{display:none}.projects{grid-template-columns:1fr}.avatar{width:120px;height:120px}}
+    @media (max-width:1000px) { .hero{grid-template-columns:1fr;} .projects{grid-template-columns:repeat(2,1fr);} }
+    @media (max-width:640px) { nav a{display:none} .projects{grid-template-columns:1fr;} .avatar{width:120px;height:120px;} }
+
+    /* Video in project card */
+    .project video { width:100%; border-radius:10px; margin-top:6px; }
   </style>
 </head>
 <body>
@@ -72,84 +195,90 @@
     <section class="hero">
       <div class="intro" id="about">
         <h1 class="name">M Tehjo Nithya Shree</h1>
-        <p class="role"> •Student • PCB Designer (Intermediate) • Embedded Systems •IoT •FPGA enthusiast</p>
+        <p class="role"> •ECE Student • PCB Designer • Embedded Systems • IoT • FPGA Enthusiast</p>
 
         <div class="buttons">
           <button class="btn primary" onclick="scrollToSection('projects')">View Projects</button>
           <a class="btn" href="#contact">Contact</a>
         </div>
 
-        <p style="color:var(--muted)">I built basic prototypes of embedded systems, FPGA projects, PCB designs using KiCAD and explored the world of cybersecurity. Below are some projects and a short summary — click any card to see details.</p>
+        <p style="color:var(--muted)">I built embedded systems prototypes, FPGA projects, PCB designs, and explored computational imaging. Click a project card for more details.</p>
 
-        <h3 style="margin-top:18px;color:#cfe3ff">Skills</h3>
+        <h3 style="margin-top:18px;color:#0b2a4d">Skills</h3>
         <div class="skills">
-          <div class="chip"><i class="fab fa-python" style="margin-right:6px"></i> Python</div>
-          <div class="chip"><i class="fab fa-html5" style="margin-right:6px"></i> HTML</div>
-          <div class="chip"><i class="fab fa-js-square" style="margin-right:6px"></i> JavaScript</div>
+          <div class="chip"><i class="fab fa-python"></i> Python</div>
+          <div class="chip"><i class="fab fa-html5"></i> C/Embedded C</div>
+          <div class="chip"><i class="fab fa-js-square"></i> ESP32</div>
           <div class="chip">STM32</div>
-          <div class="chip">FPGA / Verilog</div>
-          <div class="chip">Signal Processing</div>
+          <div class="chip">FPGA </div>
+          <div class="chip">Verilog</div>
+          <div class="chip">VxWorks</div>
+          <div class="chip">Arduino</div>
         </div>
 
         <div id="projects" style="margin-top:22px">
-          <h3 style="color:#cfe3ff">Projects</h3>
+          <h3 style="color:#0b2a4d">Projects</h3>
           <div class="projects">
             <article class="project" onclick="openProject('Vending Machine Controller','Built using STM32 + FreeRTOS.')">
-              <h4>Vending Machine Controller</h4>
-              <p>STM32, FreeRTOS, I2C OLED, Keypad</p>
+              <h4>Washing Machine Controller Prototype</h4>
+              <p>STM32, STM32CubdeIDE, LEDs</p>
+              <p>Engineered a prototype of washing machine controller on an STM32 board.</p>
+              <p>The system used a hardware timer to dictate the duration of each operational state (e.g., wash, rinse, spin), while a MOD-8 counter managed the sequence.</p>
+              <p>An external interrupt provided pause/resume functionality, and three LEDs served as a status panel, displaying the current cycle in binary.</p>
+              <video src="stm32_interruptg.mp4" controls></video>
               <div class="tags"><small class="chip">Embedded</small><small class="chip">C</small></div>
             </article>
 
             <article class="project" onclick="openProject('FPGA Paddle Ball','VGA game implemented on Basys3 in Verilog.')">
               <h4>FPGA Paddle Ball</h4>
               <p>Verilog, VGA controller, Debounce</p>
+              <video src="assets/videos/paddleball.mp4" controls></video>
               <div class="tags"><small class="chip">FPGA</small><small class="chip">Verilog</small></div>
             </article>
 
             <article class="project" onclick="openProject('Lensless Imaging Demo','A computational imaging prototype.')">
               <h4>Lensless Imaging</h4>
-              <p>Computational Imaging, Reconstruction</p>
+              <p>Computational Imaging, Python</p>
+              <img src="assets/images/lensless.png" alt="Lensless Imaging">
               <div class="tags"><small class="chip">Research</small><small class="chip">Python</small></div>
             </article>
-
           </div>
         </div>
       </div>
 
       <aside class="card">
         <a class="avatar" href="#about">
-          <!-- LOCAL IMAGE PATH: This uses the uploaded screenshot as a placeholder. Replace with your own image in the repo. -->
-          <img src="/mnt/data/25fea1f9-b4c7-4163-a591-04e1b007bb72.png" alt="Profile">
+          <img src="tjaiimg.jpg" alt="Profile">
         </a>
         <div style="text-align:center">
-          <h3 style="margin:0;color:#fff">Tehjo Nithya Shree</h3>
-          <p style="margin:4px 0;color:var(--muted)">Embedded Systems • FPGA • Computational Imaging</p>
+          <h3 style="margin:0;color:#0b2a4d">M Tehjo Nithya Shree</h3>
+          <p style="margin:4px 0;color:var(--muted)">•Embedded Systems •Internet of Things •PCB Designing • FPGA • Image Encryption </p>
         </div>
 
         <div class="socials">
           <a href="https://github.com/Tehjo4" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:yourmail@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/tehjo-nithya-shree-m-668710281?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRwILoq%2FbR%2FSJiVHnSmDAbA%3D%3D" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:mtehjonithyashree@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
-
       </aside>
     </section>
 
     <section class="contact" id="contact">
       <div class="card">
         <div class="left">
-          <h3 style="margin:0;color:#fff">Let's debug together for a better tomorrow!</h3>
+          <h3 style="margin:0;color:#0b2a4d">Let's debug together for a better tomorrow!</h3>
           <p style="color:var(--muted);margin-top:6px">Email: mtehjonithyashree@gmail.com • Location: Coimbatore, Tamil Nadu, India</p>
         </div>
-        <div style="display:flex;align-items:center;gap:10px">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
           <a class="btn" href="mailto:mtehjonithyashree@gmail.com">Email me</a>
           <a class="btn" href="https://github.com/Tehjo4" target="_blank">My GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/tehjo-nithya-shree-m-668710281?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRwILoq%2FbR%2FSJiVHnSmDAbA%3D%3D" target="_blank">LinkedIn</a>
         </div>
       </div>
     </section>
 
     <footer>
-      © <span id="year"></span> Tehjo Nithya Shree — Built with HTML, CSS & JS
+      © <span id="year"></span>M Tehjo Nithya Shree 
     </footer>
   </main>
 
@@ -166,8 +295,8 @@
     function openProject(title,desc){
       const w = window.open('', '_blank', 'width=520,height=420');
       w.document.write(`<title>${title}</title>`);
-      w.document.write(`<style>body{font-family:Arial;padding:18px;background:#071022;color:#eaf3ff} h1{color:#fff} p{color:#c9d8ea}</style>`);
-      w.document.write(`<h1>${title}</h1><p>${desc}</p><p style="margin-top:18px;color:#bcd3ef">(This is a quick preview — replace with your project page or GitHub link.)</p>`);
+      w.document.write(`<style>body{font-family:Arial;padding:18px;background:#cce7ff;color:#0b2a4d} h1{color:#1e90ff} p{color:#0b2a4d}</style>`);
+      w.document.write(`<h1>${title}</h1><p>${desc}</p><p style="margin-top:18px;color:#4a6fa5">(This is a quick preview — replace with your project page or GitHub link.)</p>`);
       w.document.close();
     }
   </script>
