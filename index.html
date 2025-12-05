@@ -1,71 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tehjo Nithya Shree - Portfolio</title>
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    :root {
-      --accent: #1e90ff;
-      --bg: #d6eaff;
-      --card: white;
-      --text: #0b2a4d;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    header {
-      background: white;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    header a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: bold;
-    }
-
-    .container {
-      width: 85%;
-      margin: auto;
-      padding: 40px 0;
-    }
-
-    .profile-box {
-      background: var(--card);
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-    }
-
-    .skills span {
-      background: #cce3ff;
-      padding: 6px 12px;
-      border-radius: 8px;
-      margin-right: 8px;
-      display: inline-block;
-      margin-top: 8px;
-    }
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
     /* PROJECT CAROUSEL */
     .project-carousel-container {
       position: relative;
@@ -139,80 +75,114 @@
     }
 
   </style>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>M Tehjo Nithya Shree</title>
+  <script src="https://kit.fontawesome.com/a2d9b6b3b3.js" crossorigin="anonymous"></script>
+  <style>
+    :root { --accent:#1e90ff; --bg:#cce7ff; --card:#e0f0ff; --muted:#4a6fa5; }
+    *{box-sizing:border-box;} body{margin:0;font-family:Inter,system-ui;color:#0b2a4d;background:linear-gradient(180deg,#cce7ff 0%,#99c2ff 100%);} 
+    header{position:fixed;left:0;right:0;top:0;background:rgba(255,255,255,0.45);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,0.1);z-index:40;}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px;}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;} .logo i{font-size:20px;color:var(--accent);} 
+    nav a{color:#0b2a4d;text-decoration:none;margin-left:18px;font-weight:600;transition:.25s;} nav a:hover{color:var(--accent);}   
+    .hero{max-width:1100px;margin:110px auto 40px;padding:24px;display:grid;grid-template-columns:1fr 360px;gap:28px;}
+    .intro{background:var(--card);padding:26px;border-radius:14px;box-shadow:0 6px 30px rgba(0,102,255,0.2);} 
+    .name{font-size:28px;margin:0;} .role{color:var(--muted);} 
+    .buttons{display:flex;gap:10px;margin:16px 0;} .btn{padding:10px 14px;border-radius:10px;border:1px solid rgba(0,0,0,0.1);cursor:pointer;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;} 
+    .btn.primary{background:var(--accent);color:#fff;border:none;} .btn:hover{opacity:.85;transform:translateY(-2px);} 
+    .skills{display:flex;flex-wrap:wrap;gap:8px;} .chip{background:rgba(30,144,255,0.1);padding:8px 10px;border-radius:8px;font-weight:600;display:flex;align-items:center;gap:4px;} 
+    .card{background:#e0f0ff;padding:18px;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:12px;} 
+    .avatar{width:160px;height:160px;border-radius:14px;overflow:hidden;} .avatar img{width:100%;height:100%;object-fit:cover;} 
+    .socials{display:flex;gap:10px;margin-top:10px;} .socials a{width:44px;height:44px;border-radius:10px;background:rgba(30,144,255,0.1);display:flex;align-items:center;justify-content:center;font-size:20px;text-decoration:none;color:#0b2a4d;} .socials a:hover{background:var(--accent);color:#fff;} 
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px;} .project{background:#f0f8ff;padding:14px;border-radius:12px;border:1px solid rgba(0,0,0,0.05);cursor:pointer;} .project:hover{transform:translateY(-6px);} .project h4{margin:6px 0;} 
+    @media(max-width:1000px){.hero{grid-template-columns:1fr;} .projects{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:640px){nav a{display:none;} .projects{grid-template-columns:1fr;} }
+  </style>
 </head>
 <body>
-    <section class="profile-card" style="display:flex;justify-content:center;margin-top:40px;">
-        <div style="width:260px;height:auto;padding:20px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,0.15);text-align:center;background:white;">
-            <img src="tjaiimg.jpg" alt="Profile Image" style="width:100%;border-radius:20px;">
-        </div>
-    </section>
-
 <header>
-  <div><strong>Tehjo4</strong></div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#certs">Certificates</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="nav">
+    <div class="logo"><i class="fas fa-layer-group"></i>M TEHJO NITHYA SHREE</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
+<main>
+  <section class="hero">
+    <div class="intro" id="about">
+      <h1 class="name">M Tehjo Nithya Shree</h1>
+      <p class="role">•ECE Student • PCB Designer • Embedded Systems • IoT • FPGA Enthusiast</p>
 
-  <!-- PROFILE SECTION -->
-  <div class="profile-box">
-    <h2>M Tehjo Nithya Shree</h2>
-    <p>• ECE Student • PCB Designer • Embedded Systems • IoT • FPGA Enthusiast</p>
+      <div class="buttons">
+        <button class="btn primary" onclick="scrollToSection('projects')">View Projects</button>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn" href="resume.pdf" download><i class="fas fa-download"></i> Resume</a>
+      </div>
 
-    <button class="resume-btn" onclick="window.open('YOUR_RESUME_LINK','_blank')">
-      <i class="fa-solid fa-download"></i> Download Resume
-    </button>
+      <h3>Skills</h3>
+      <div class="skills">
+        <div class="chip"><i class="fab fa-python"></i> Python</div>
+        <div class="chip">C/Embedded C</div>
+        <div class="chip">Verilog</div>
+        <div class="chip">ESP32</div>
+        <div class="chip">STM32</div>
+        <div class="chip">Arduino</div>
+        <div class="chip">FPGA</div>
+        <div class="chip">PCB Designing</div>    
+      </div>
 
-    <h3>Skills</h3>
-    <div class="skills">
-      <span>Python</span><span>C/Embedded C</span><span>Verilog</span>
-      <span>ESP32</span><span>STM32</span><span>Arduino</span><span>FPGA</span>
+      <h3 id="projects">Projects</h3>
+      <div class="projects">
+        <article class="project" onclick="location.href='https://drive.google.com/file/d/1bpT6sSpWa9q4qr71X6OPwUWowPY8qI6I/view?usp=drive_link'">
+          <h4>Washing Machine Controller Prototype</h4>
+          <p>STM32, STM32CudeIDE, LEDs</p>
+        </article>
+
+        <article class="project" onclick="location.href='https://github.com/Tehjo4/Basic-Vending-Machine-Prototype-using-STM32'">
+          <h4>Vending Machine Prototype</h4>
+          <p>STM32, STM32CudeIDE (FreeRTOS), OLED, Keypad, Buzzer</p>
+        </article>
+
+        <article class="project" onclick="location.href='https://github.com/Tehjo4/Image-Encryption'">
+          <h4>Image Encryption Algorithm</h4>
+          <p>CLH Chaotic Map, MATLAB</p>
+        </article>
+      </div>
     </div>
-  </div>
-
-  <!-- PROJECTS SECTION -->
-  <h3 id="projects">Projects</h3>
-
-  <div class="project-carousel-container">
-    <button class="carousel-arrow carousel-left" onclick="moveCarousel(-1)">❮</button>
-    <button class="carousel-arrow carousel-right" onclick="moveCarousel(1)">❯</button>
-
-    <div class="project-carousel" id="projectCarousel">
-
-      <article class="project" onclick="location.href='https://drive.google.com/file/d/1bpT6sSpWa9q4qr71X6OPwUWowPY8qI6I/view?usp=drive_link'">
-        <h4>Washing Machine Controller Prototype</h4>
-        <p>STM32, STM32CubeIDE, LEDs</p>
-      </article>
-
-      <article class="project" onclick="location.href='https://github.com/Tehjo4/Basic-Vending-Machine-Prototype-using-STM32'">
-        <h4>Vending Machine Prototype</h4>
-        <p>STM32, FreeRTOS, OLED, Keypad, Buzzer</p>
-      </article>
-
-      <article class="project" onclick="location.href='https://github.com/Tehjo4/Image-Encryption'">
-        <h4>Image Encryption Algorithm</h4>
-        <p>CLH Chaotic Map, MATLAB</p>
-      </article>
-
-      <article class="project" onclick="location.href='https://drive.google.com/drive/folders/1xdDect8P4MLBWL-V8ZvR-QdS6kLgEADu?usp=sharing'">
-        <h4>RADAR Simulation using Arduino UNO</h4>
-        <p>Arduino, MATLAB</p>
-      </article>
-
-      <article class="project" onclick="location.href='https://github.com/Tehjo4/RTL-Exploration'">
-        <h4>RTL Exploration</h4>
-        <p>ModelSim, Verilog</p>
-      </article>
-
+    <article class="project" onclick="location.href='https://drive.google.com/drive/folders/1xdDect8P4MLBWL-V8ZvR-QdS6kLgEADu?usp=sharing'">
+          <h4>RADAR Simulation using Arduino UNO</h4>
+          <p>CLH Chaotic Map, MATLAB</p>
+        </article>
+      </div>
     </div>
-  </div>
+    <article class="project" onclick="location.href='https://github.com/Tehjo4/RTL-Exploration'">
+          <h4>RTL Exploration</h4>
+          <p>ModelSim, Verilog</p>
+        </article>
+      </div>
+    </div>
 
-  <!-- CERTIFICATES SECTION -->
+    <aside class="card">
+      <a class="avatar"><img src="tjaiimg.jpg" alt="profile"></a>
+      <div style="text-align:center">
+        <h3>M Tehjo Nithya Shree</h3>
+        <p>Embedded Systems • IoT • FPGA • Image Encryption</p>
+      </div>
+
+      <div class="socials">
+        <a href="https://github.com/Tehjo4" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/tehjo-nithya-shree-m-668710281" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </aside>
+  </section>
+
+
 <section id="achievements" style="max-width:1100px;margin:40px auto;padding:20px;">
 <h3 style="margin-bottom:16px;color:#0b2a4d;">Achievements & Certificates</h3>
 <ul style="line-height:1.8;font-weight:600;color:#0b2a4d;">
@@ -228,38 +198,51 @@
 </ul>
 </section>
 
-  <!-- CONTACT SECTION -->
-  <h3 id="contact">Contact</h3>
-  <div class="socials">
-    <a href="https://github.com/Tehjo4" target="_blank"><i class="fa-brands fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/tehjo-nithya-shree-m-668710281" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-  </div>
-   <div class="card">
+  <section class="contact" id="contact">
+    <div class="card">
       <div class="left">
         <h3>Let's debug together for sustainable solutions!</h3>
         <p>Email: mtehjonithyashree@gmail.com • Coimbatore, India</p>
       </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="mailto:mtehjonithyashree@gmail.com">Email</a>
+        <a class="btn" href="https://github.com/Tehjo4" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/tehjo-nithya-shree-m-668710281" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
+  <footer style="text-align:center;margin:40px 0;color:var(--muted)"></section>
 
-</div>
+<section style="max-width:1100px;margin:40px auto;padding:20px;text-align:center">
+  <h3 style="color:#0b2a4d;margin-bottom:10px;">For more details, download my resume</h3>
+  <a href="resume.pdf" download class="btn primary" style="display:inline-flex;align-items:center;gap:8px;">
+    <i class="fas fa-download"></i> Download Resume
+  </a>
+</section>
+
+© <span id="year"></span> M Tehjo Nithya Shree</footer>
+</main>
 
 <script>
-let offset = 0;
-function moveCarousel(direction) {
-  const carousel = document.getElementById("projectCarousel");
-  const cardWidth = carousel.children[0].offsetWidth + 14;
-  const visibleCards = 3;
-
-  offset += direction * cardWidth;
-
-  const maxOffset = -(cardWidth * (carousel.children.length - visibleCards));
-  if (offset < maxOffset) offset = 0;
-  if (offset > 0) offset = maxOffset;
-
-  carousel.style.transform = `translateX(${offset}px)`;
-}
+  document.getElementById('year').textContent = new Date().getFullYear();
+  function scrollToSection(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});} 
 </script>
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Smooth scroll helper
+    function scrollToSection(id){
+      document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    // Direct project link opener
+    function openProject(link){
+      window.open(link, '_blank');
+    }
+  </script>
 </body>
 </html>
 
+<!-- Final Clean index.html generated by ChatGPT -->
