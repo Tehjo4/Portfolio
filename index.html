@@ -219,12 +219,17 @@
       font-size: 16px;
       margin-top: 12px;
     }
-    #internships {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+    .internship-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.company-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
   </style>
 <head>
   <meta charset="utf-8" />
@@ -341,18 +346,30 @@
   <h3 style="margin-bottom:16px;color:#0b2a4d;">Internships</h3>
 
   <!-- Internship 1 -->
-  <div class="project" onclick="window.open('https://drive.google.com/file/d/19nL0lAzrgqOtVr7zQq_4PwyPZzLv1Mwz/view?usp=sharing')">
+<div class="internship" onclick="window.open('https://drive.google.com/file/d/19nL0lAzrgqOtVr7zQq_4PwyPZzLv1Mwz/view?usp=sharing')">
+  
+  <div class="internship-header">
+    <img src="https://www.9curry.com/organizations/drdo-cabs" alt="DRDO Logo" class="company-logo">
     <h4>Embedded Systems Intern</h4>
-    <p>DRDO, CABS, Bangalore • 02.06.2025 - 02.07.2025</p>
-    <p>Worked on VxWorks, debugged real-time avionics LRU, configured the CPU affinity.</p>
   </div>
 
+  <p>Defence Avionics Research • 02.06.2025 - 02.07.2025</p>
+  <p>Worked on VxWorks RTOS and configured CPU affinity on avionics LRU.</p>
+
+</div>
+
   <!-- Internship 2 -->
-  <div class="project" onclick="window.open('YOUR_CERTIFICATE_LINK')">
+ <div class="internship" onclick="window.open('YOUR_LINK')">
+  
+  <div class="internship-header">
+    <img src="https://kpmg.com/in/en/about/leadership.html" alt="KPMG Logo" class="company-logo">
     <h4>Cybersecurity Intern</h4>
-    <p>KPMG • 19.02.2026 - Present</p>
-    <p>Understanding and testing HITRUST CSF and SOC controls of cybersecurity.</p>
   </div>
+
+  <p>KPMG • 19.02.2026 - Present</p>
+  <p>Understanding and testing the HITRUST CSF and SOC controls of cybersecurity.</p>
+
+</div>
 
 </section>
 
