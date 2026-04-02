@@ -290,77 +290,95 @@ section {
 
 <main>
   <section class="hero" style="max-width:1100px;margin:40px auto;padding:20px;">
+
+  <!-- ✅ CARD 1: PROFILE -->
+  <div class="card" style="margin-bottom:20px;">
+    
     <div class="intro" id="about">
       <h1 class="name">M Tehjo Nithya Shree</h1>
 
       <div class="buttons">
         <button class="btn primary" onclick="scrollToSection('projects')">View Projects</button>
         <a class="btn" href="#contact">Contact</a>
-        <a class="btn" href="https://drive.google.com/file/d/1aw433YX3XyuCviSB0zBcvtHBSIwKSAXA/view?usp=drive_link" download><i class="fas fa-download"></i> Resume</a>
-      </div>
-   <aside class="card">
-      <a class="avatar"><img src="tjaiimg.jpg" alt="profile"></a>
-      <div style="text-align:center">
-        <p>Embedded Systems • IoT • PCB Designing •FPGA • Image Encryption</p>
+        <a class="btn" href="https://drive.google.com/file/d/1aw433YX3XyuCviSB0zBcvtHBSIwKSAXA/view?usp=drive_link" download>
+          <i class="fas fa-download"></i> Resume
+        </a>
       </div>
 
-      <div class="socials">
-        <a href="https://github.com/Tehjo4" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/tehjo-nithya-shree-m-668710281" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <aside class="card" style="margin-top:15px;">
+        <a class="avatar"><img src="tjaiimg.jpg" alt="profile"></a>
+        <div style="text-align:center">
+          <p>Embedded Systems • IoT • PCB Designing • FPGA • Image Encryption</p>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com/Tehjo4" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/tehjo-nithya-shree-m-668710281" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ✅ CARD 2: SKILLS -->
+  <div class="card" style="margin-bottom:20px;">
+    <h3>Skills</h3>
+
+    <div class="skills">
+      <div class="chip"><i class="fab fa-python"></i> Python</div>
+      <div class="chip">C/Embedded C</div>
+      <div class="chip">Verilog</div>
+      <div class="chip">ESP32</div>
+      <div class="chip">STM32</div>
+      <div class="chip">Arduino</div>
+      <div class="chip">VxWorks</div>
+      <div class="chip">MATLAB</div>
+      <div class="chip">FPGA</div>
+      <div class="chip">PCB Designing</div>
+    </div>
+  </div>
+
+  <!-- ✅ CARD 3: PROJECTS -->
+  <div class="card">
+    <h3 id="projects">Projects</h3>
+
+    <div class="project-carousel-container">
+      <button class="carousel-arrow carousel-left" onclick="moveCarousel(-1)">❮</button>
+      <button class="carousel-arrow carousel-right" onclick="moveCarousel(1)">❯</button>
+
+      <div class="project-carousel" id="projectCarousel">
+
+        <article class="project" onclick="location.href='https://drive.google.com/file/d/1bpT6sSpWa9q4qr71X6OPwUWowPY8qI6I/view?usp=drive_link'">
+          <h4>Washing Machine Controller Prototype</h4>
+          <p>STM32, STM32CubeIDE, LEDs</p>
+        </article>
+
+        <article class="project" onclick="location.href='https://github.com/Tehjo4/Basic-Vending-Machine-Prototype-using-STM32'">
+          <h4>Vending Machine Prototype</h4>
+          <p>STM32, FreeRTOS, OLED, Keypad, Buzzer</p>
+        </article>
+
+        <article class="project" onclick="location.href='https://github.com/Tehjo4/Image-Encryption'">
+          <h4>Image Encryption Algorithm</h4>
+          <p>CLH Chaotic Map, MATLAB</p>
+        </article>
+
+        <article class="project" onclick="location.href='https://drive.google.com/drive/folders/1xdDect8P4MLBWL-V8ZvR-QdS6kLgEADu?usp=sharing'">
+          <h4>RADAR Simulation using Arduino UNO</h4>
+          <p>Arduino, MATLAB</p>
+        </article>
+
+        <article class="project" onclick="location.href='https://github.com/Tehjo4/RTL-Exploration'">
+          <h4>RTL Exploration</h4>
+          <p>ModelSim, Verilog</p>
+        </article>
+
       </div>
-    </aside>
-      <h3>Skills style="max-width:1100px;margin:40px auto;padding:20px;"</h3>
-      <div class="skills">
-        <div class="chip"><i class="fab fa-python"></i> Python</div>
-        <div class="chip">C/Embedded C</div>
-        <div class="chip">Verilog</div>
-        <div class="chip">ESP32</div>
-        <div class="chip">STM32</div>
-        <div class="chip">Arduino</div>
-        <div class="chip">VxWorks</div>
-        <div class="chip">MATLAB</div>
-        <div class="chip">FPGA</div>
-        <div class="chip">PCB Designing</div>    
-      </div>
-
-      <h3 id="projects">Projects style="max-width:1100px;margin:40px auto;padding:20px;"</h3>
-<div class="card">
-<div class="project-carousel-container">
-  <button class="carousel-arrow carousel-left" onclick="moveCarousel(-1)">❮</button>
-  <button class="carousel-arrow carousel-right" onclick="moveCarousel(1)">❯</button>
-
-  <div class="project-carousel" id="projectCarousel">
-
-    <article class="project" onclick="location.href='https://drive.google.com/file/d/1bpT6sSpWa9q4qr71X6OPwUWowPY8qI6I/view?usp=drive_link'">
-      <h4>Washing Machine Controller Prototype</h4>
-      <p>STM32, STM32CubeIDE, LEDs</p>
-    </article>
-
-    <article class="project" onclick="location.href='https://github.com/Tehjo4/Basic-Vending-Machine-Prototype-using-STM32'">
-      <h4>Vending Machine Prototype</h4>
-      <p>STM32, FreeRTOS, OLED, Keypad, Buzzer</p>
-    </article>
-
-    <article class="project" onclick="location.href='https://github.com/Tehjo4/Image-Encryption'">
-      <h4>Image Encryption Algorithm</h4>
-      <p>CLH Chaotic Map, MATLAB</p>
-    </article>
-
-    <article class="project" onclick="location.href='https://drive.google.com/drive/folders/1xdDect8P4MLBWL-V8ZvR-QdS6kLgEADu?usp=sharing'">
-      <h4>RADAR Simulation using Arduino UNO</h4>
-      <p>Arduino, MATLAB</p>
-    </article>
-
-    <article class="project" onclick="location.href='https://github.com/Tehjo4/RTL-Exploration'">
-      <h4>RTL Exploration</h4>
-      <p>ModelSim, Verilog</p>
-    </article>
+    </div>
 
   </div>
-</div>
-</div>
 
-  </section>
+</section>  </section>
     <section id="internships" style="max-width:1100px;margin:40px auto;padding:20px;">
     <div class="card">
   <h3 style="margin-bottom:16px;color:#0b2a4d;">Internships</h3>
